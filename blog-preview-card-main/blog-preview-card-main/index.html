@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        border: 0;
+      }
+
+      body {
+        font-family: "Figtree", "sansserif";
+        background-color: hsl(47, 88%, 63%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .container {
+        max-width: 384px;
+        height: 522px;
+        background-color: hsl(0, 0%, 100%);
+        border: 1px solid black; /* Simplified border syntax */
+        border-radius: 20px;
+        box-shadow: 10px 10px 0px black;
+
+        /* ADD THIS: This acts as the internal spacing for the whole card */
+        padding: 24px;
+
+        /* Important: ensures padding doesn't make the card wider than 384px */
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 24px;
+      }
+
+      .blog-img {
+        width: 320px;
+        display: block;
+        border-radius: 20px;
+        padding: 10px 10px 10px 10px;
+      }
+      .main-content {
+        width: 348px;
+        padding-left: 10px;
+        margin-bottom: 24px;
+      }
+
+      .blog-keyword {
+        font-size: 16px;
+
+        color: hsl(0, 0%, 7%);
+        font-weight: 800;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center; /*vertical center*/
+        justify-content: center; /* horizontal center*/
+        padding: 4px 12px;
+        gap: 4px;
+
+        background-color: hsl(47, 88%, 63%);
+      }
+      .margin-sm {
+        margin-bottom: 12px;
+      }
+
+      .date {
+        font-size: 16px;
+      }
+      .main-heading {
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      .main-heading:hover {
+        color: hsl(47, 88%, 63%);
+        cursor: pointer;
+      }
+      .card-text {
+        font-size: 16px;
+        color: hsl(0, 0%, 42%);
+      }
+      /*****author part*****/
+      .author-content {
+        width: 350px;
+        padding-left: 10px;
+        display: flex;
+        gap: 12px;
+      }
+      .author-img {
+        height: 32px;
+        width: 32px;
+      }
+      .author-name {
+        padding-top: 5px;
+        font-size: 16px;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <img
+          class="blog-img"
+          src="../blog-preview-card-main/assets/images/illustration-article.svg"
+          alt="blog image"
+        />
+      </div>
+      <div class="main-content">
+        <p class="blog-keyword margin-sm">Learning</p>
+        <p class="date margin-sm">Published 21 DEC 2023</p>
+
+        <h3 class="main-heading margin-sm">HTML & CSS foundation</h3>
+        <p class="card-text margin-sm">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+      </div>
+      <div class="author-content">
+        <img
+          class="author-img"
+          src="../blog-preview-card-main/assets/images/image-avatar.webp"
+          alt="blog-author"
+        />
+        <p class="author-name">Greg Hooper</p>
+      </div>
+    </div>
+  </body>
+</html>
